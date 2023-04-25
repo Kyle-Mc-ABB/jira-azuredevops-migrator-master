@@ -1,0 +1,344 @@
+{
+  "source-project": "QCS-Augmented-Reality",
+  "target-project": "DLK-QAR-Sandbox",
+  "query": "project=QCS-Augmented-Reality ORDER BY Rank ASC",
+  "using-jira-cloud": false,
+  "workspace": "C:\\temp\\JiraExport\\agileEpic",
+  "epic-link-field": "Epic Link",
+  "sprint-field": "Sprint",
+  "download-options": 7,
+  "batch-size": 20,
+  "log-level": "Info",
+  "attachment-folder": "AttachmentsUserStory",
+  "user-mapping-file": "users.txt",
+  "base-area-path": "Test",
+  "base-iteration-path": "Migrated-Kyle",
+  "ignore-failed-links": true,
+  "process-template": "Agile",
+  "link-map": {
+    "link": [
+      {
+        "source": "Epic",
+        "target": "System.LinkTypes.Hierarchy-Reverse"
+      },
+      {
+        "source": "Parent",
+        "target": "System.LinkTypes.Hierarchy-Reverse"
+      },
+      //{
+      //  "source": "Child",
+      //  "target": "System.LinkTypes.Hierarchy-Reverse"
+      //},
+      {
+        "source": "Relates",
+        "target": "System.LinkTypes.Related"
+      },
+      {
+        "source": "Duplicate",
+        "target": "System.LinkTypes.Duplicate-Reverse"
+      }
+    ]
+  },
+  "type-map": {
+    "type": [
+      {
+        "source": "Epic",
+        "target": "Epic"
+      },
+      {
+        "source": "Improvement",
+        "target": "User Story"
+      },
+      {
+        "source": "Vulnerability",
+        "target": "User Story"
+      },
+      {
+        "source": "Requirement",
+        "target": "User Story"
+      },
+      {
+        "source": "New Feature",
+        "target": "User Story"
+      },
+      {
+        "Source": "Test",
+        "Target": "User Story"
+      },
+      {
+        "source": "Story",
+        "target": "User Story"
+      },
+      {
+        "source": "Bug",
+        "target": "Bug"
+      },
+      {
+        "source": "Test",
+        "target": "Issue"
+      },
+      {
+        "source": "Task",
+        "target": "Task"
+      },
+      {
+        "source": "Documentation",
+        "target": "Task"
+      },
+      {
+        "source": "Sub Task",
+        "target":  "Task"
+      }
+
+    ]
+  },
+  "field-map": {
+    "field": [
+      {
+        "source": "summary",
+        "target": "System.Title",
+        "mapper": "MapTitle"
+      },
+      {
+        "source": "FixVersions",
+        "target": "Microsoft.VSTS.Build.IntegrationBuild"
+      },
+      {
+        "source": "FixVersions",
+        "target": "System.Tags"
+      },
+      {
+        "source": "assignee",
+        "target": "System.AssignedTo",
+        "mapper": "MapUser"
+      },
+      {
+        "source": "description",
+        "target": "System.Description",
+        "mapper": "MapRendered"
+      },
+      {
+        "source": "resolution",
+        "source-type": "name",
+        "target": "Custom.ResolutionList"
+      },
+      {
+        "source": "created",
+        "target": "Custom.CreatedTest",
+        "type": "datetime"
+      },
+      {
+        "source": "updated",
+        "target": "Custom.UpdatedTest",
+        "type": "datetime"
+      },
+      {
+        "source": "resolutiondate",
+        "target": "Custom.ClosedTest",
+        "type": "datetime"
+      },
+      {
+        "source": "priority",
+        "target": "Microsoft.VSTS.Common.Priority",
+        "mapping": {
+          "values": [
+            {
+              "source": "Blocker",
+              "target": "1"
+            },
+            {
+              "source": "Critical",
+              "target": "1"
+            },
+            {
+              "source": "Highest",
+              "target": "1"
+            },
+            {
+              "source": "Major",
+              "target": "2"
+            },
+            {
+              "source": "High",
+              "target": "2"
+            },
+            {
+              "source": "Medium",
+              "target": "3"
+            },
+            {
+              "source": "Low",
+              "target": "3"
+            },
+            {
+              "source": "Lowest",
+              "target": "4"
+            },
+            {
+              "source": "Minor",
+              "target": "4"
+            },
+            {
+              "source": "Trivial",
+              "target": "4"
+            }
+          ]
+        }
+      },
+      {
+        "source": "Sprint",
+        "source-type": "name",
+        "target": "System.IterationPath",
+        "mapper": "MapSprint"
+      },
+      {
+        "source": "labels",
+        "target": "System.Tags",
+        "mapper": "MapTags"
+      },
+      {
+        "source": "comment",
+        "target": "System.History",
+        "mapper": "MapRendered"
+      },
+      {
+        "source": "status",
+        "target": "System.State",
+        "for": "User Story",
+        "mapping": {
+          "values": [
+            {
+              "source": "To Do",
+              "target": "New"
+            },
+            {
+              "source": "Reopened",
+              "target": "Reopened"
+            },
+            {
+              "source": "Done",
+              "target": "Done"
+            },
+            {
+              "source": "In Progress",
+              "target": "Active"
+            },
+            {
+
+              "source": "Resolved",
+              "target": "Resolved"
+            },
+            {
+              "source": "Open",
+              "target": "Active"
+            },
+            {
+              "source": "Validation Required",
+              "target": "Active"
+            },
+            {
+              "source": "Code Merge Required",
+              "target": "Active"
+            },
+            {
+              "source": "Closed",
+              "target": "Closed"
+            }
+
+          ]
+        }
+      },
+      {
+        "source": "status",
+        "target": "System.State",
+        "for": "User Story",
+        "mapping": {
+          "values": [
+            {
+              "source": "To Do",
+              "target": "New"
+            },
+            {
+              "source": "Reopened",
+              "target": "Reopened"
+            },
+            {
+              "source": "Done",
+              "target": "Done"
+            },
+            {
+              "source": "In Progress",
+              "target": "Active"
+            },
+            {
+
+              "source": "Resolved",
+              "target": "Resolved"
+            },
+            {
+              "source": "Open",
+              "target": "Active"
+            },
+            {
+              "source": "Validation Required",
+              "target": "Active"
+            },
+            {
+              "source": "Code Merge Required",
+              "target": "Active"
+            },
+            {
+              "source": "Closed",
+              "target": "Closed"
+            }
+
+          ]
+        }
+      },
+      {
+        "source": "Story Points",
+        "source-type": "name",
+        "target": "Microsoft.VSTS.Scheduling.Effort",
+        "not-for": "Task"
+      },
+      //Original Estimate
+      {
+        "source": "Original Estimate",
+        "source-type": "name",
+        "target": "Microsoft.VSTS.Scheduling.OriginalEstimate",
+        "mapper": "MapRemainingWork",
+        "for": "Bug,Task"
+      },
+      //Completed Work
+      {
+        "source": "timespent",
+        "target": "Microsoft.VSTS.Scheduling.CompletedWork",
+        "mapper": "MapRemainingWork"
+
+      },
+      //Remaining Tag
+      {
+        "source": "timeestimate",
+        "target": "Custom.Remaining",
+        "mapper": "MapRemainingWork",
+        "for": "Bug,Task"
+      },
+      {
+        "source": "timeestimate",
+        "target": "Microsoft.VSTS.Scheduling.RemainingWork",
+        "mapper": "MapRemainingWork",
+        "for": "Bug,Task"
+      },
+      {
+        "source": "activity",
+        "target": "Microsoft.VSTS.Common.Activity"
+      },
+      {
+        "source": "description",
+        "target": "Microsoft.VSTS.TCM.ReproSteps",
+        "for": "Bug"
+      }
+    ]
+
+  }
+}

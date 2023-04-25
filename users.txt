@@ -1,0 +1,12 @@
+iekymcq=kyle.mcquillan@ie.abb.com
+ietasho=tanaka.shongwe@ie.abb.com
+ierobyr=robert.byrne@ie.abb.com
+iebrwhe=brian.whelan@ie.abb.com
+iearcib=arnas.cibulskis@ie.abb.com
+JIRAUSER13700=robert.byrne@ie.abb.com
+kyle.mcquillan@ie.abb.com=kyle.mcquillan@ie.abb.com
+tanaka.shongwe@ie.abb.com=tanaka.shongwe@ie.abb.com
+robert.byrne@ie.abb.com=robert.byrne@ie.abb.com
+brian.whelan@ie.abb.com=brian.whelan@ie.abb.com
+arnas.cibulskis@ie.abb.com=arnas.cibulskis@ie.abb.com
+JIRAUSER13701=robert.byrne@ie.abb.com

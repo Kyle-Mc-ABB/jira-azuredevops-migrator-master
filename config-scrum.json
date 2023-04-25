@@ -1,0 +1,477 @@
+{
+  "source-project": "QCS-Augmented-Reality",
+  "target-project": "DLK-QAR-Sandbox",
+  "query": "project= QCS-Augmented-Reality ORDER BY Rank ASC",
+  "using-jira-cloud": false,
+  "workspace": "C:\\Temp\\JiraExport\\",
+  "epic-link-field": "Epic Link",
+  "sprint-field": "Sprint",
+  "download-options": 10,
+  "batch-size": 20,
+  "log-level": "Info",
+  "attachment-folder": "Attachments",
+  "user-mapping-file": "users.txt",
+  "base-area-path": "",
+  "base-iteration-path": "",
+  "ignore-failed-links": true,
+  "process-template": "Scrum",
+  "link-map": {
+    "link": [
+      {
+        "source": "Epic",
+        "target": "System.LinkTypes.Hierarchy-Reverse"
+      },
+      {
+        "source": "Parent",
+        "target": "System.LinkTypes.Hierarchy-Reverse"
+      },
+      {
+        "source": "Child",
+        "target": "System.LinkTypes.Hierarchy-Reverse"
+      },
+      {
+        "source": "Fix Version/s",
+        "target": "System.AreaPath"
+      },
+      {
+        "source": "Relates",
+        "target": "System.LinkTypes.Related"
+      },
+      {
+        "source": "Duplicate",
+        "target": "System.LinkTypes.Duplicate-Forward"
+      }
+    ]
+  },
+  "type-map": {
+    "type": [
+      {
+        "source": "Improvement",
+        "target": "Issue"
+      },
+      {
+        "source": "Documentation",
+        "target": "User Story"
+      },
+      {
+        "source": "Test",
+        "target": "Test Case"
+      },
+
+      {
+        "source": "New Feature",
+        "target": "User Story"
+      },
+      {
+        "source": "Epic",
+        "target": "Epic"
+      },
+      {
+        "source": "Task",
+        "target": "Task"
+      },
+      {
+        "source": "Story",
+        "target": "Task"
+      },
+      {
+        "source": "Bug",
+        "target": "Bug"
+      },
+      {
+        "source": "Sub-task",
+        "target": "Task"
+      }
+    ]
+  },
+  "field-map": {
+    "field": [
+      {
+        "source": "summary",
+        "target": "System.Title",
+        "mapper": "MapTitle"
+      },
+
+      {
+        "source": "assignee",
+        "target": "System.AssignedTo",
+        "mapper": "MapUser"
+      },
+      {
+        "source": "description",
+        "target": "System.Description",
+        "mapper": "MapRendered"
+      },
+      //{
+      //  "source": "resolution",
+      //  "target": "Microsoft.VSTS.Common.Reason",
+      //  "mapping": {
+      //    "values": [
+      //      {
+      //        "source": "Fixed",
+      //        "target": "Fixed"
+      //      },
+      //      {
+      //        "source": "Duplicate",
+      //        "target": "Duplicate"
+      //      },
+      //      {
+      //        "source": "Done",
+      //        "target": "Done"
+      //      },
+      //      {
+      //        "source": "Incomplete",
+      //        "target": "Incomplete"
+      //      },
+      //      {
+      //        "source": "Won't Do",
+      //        "target": "Won't Do"
+      //      }
+
+      //    ]
+      //  }
+      //},
+      {
+        "source": "priority",
+        "target": "Microsoft.VSTS.Common.Priority",
+        "mapping": {
+          "values": [
+            {
+              "source": "Blocker",
+              "target": "1"
+            },
+            {
+              "source": "Critical",
+              "target": "1"
+            },
+            {
+              "source": "Highest",
+              "target": "1"
+            },
+            {
+              "source": "Major",
+              "target": "2"
+            },
+            {
+              "source": "High",
+              "target": "2"
+            },
+            {
+              "source": "Medium",
+              "target": "3"
+            },
+            {
+              "source": "Low",
+              "target": "3"
+            },
+            {
+              "source": "Lowest",
+              "target": "4"
+            },
+            {
+              "source": "Minor",
+              "target": "4"
+            },
+            {
+              "source": "Trivial",
+              "target": "4"
+            }
+          ]
+        }
+      },
+      {
+        "source": "Sprint",
+        "source-type": "name",
+        "target": "System.IterationPath",
+        "mapper": "MapSprint"
+      },
+      {
+        "source": "labels",
+        "target": "System.Tags",
+        "mapper": "MapTags"
+      },
+      {
+        "source": "comment",
+        "target": "System.History",
+        "mapper": "MapRendered"
+      },
+      {
+        "source": "status",
+        "target": "System.State",
+        "for": "Task",
+        "mapping": {
+          "values": [
+            {
+              "source": "Open",
+              "target": "New"
+            },
+            {
+              "source": "Closed",
+              "target": "Closed"
+            },
+            {
+              "source": "In Progress",
+              "target": "Active"
+            },
+            {
+              "source": "Reopened",
+              "target": "Active"
+            },
+            {
+              "source": "Validation Required",
+              "target": "Validation Required"
+            },
+            {
+              "source": "Code Merge Required",
+              "target": "Code Merge Required"
+            },
+            {
+              "source": "Resolved",
+              "target": "Removed"
+            }
+          ]
+        }
+      },
+      {
+        "source": "status",
+        "target": "System.State",
+        "for": "Bug",
+        "mapping": {
+          "values": [
+            {
+              "source": "Open",
+              "target": "Active"
+            },
+            {
+              "source": "Done",
+              "target": "Done"
+            },
+            {
+              "source": "In Progress",
+              "target": "Active"
+            },
+            {
+              "source": "Reopened",
+              "target": "Active"
+            },
+            {
+              "source": "Validation Required",
+              "target": "Validation Required"
+            },
+            {
+              "source": "Code Merge Required",
+              "target": "Code Merge Required"
+            },
+            {
+              "source": "Closed",
+              "target": "Closed"
+            },
+            {
+              "source": "Resolved",
+              "target": "Resolved"
+            }
+          ]
+        }
+      },
+      {
+        "source": "status",
+        "target": "System.State",
+        "for": "Issue",
+        "mapping": {
+          "values": [
+            {
+              "source": "To Do",
+              "target": "New"
+            },
+            {
+              "source": "Open",
+              "target": "Active"
+            },
+            {
+              "source": "Closed",
+              "target": "Closed"
+            },
+            {
+              "source": "Reopened",
+              "target": "Reopened"
+            },
+            {
+              "source": "In Progress",
+              "target": "Committed"
+            },
+            {
+              "source": "Validation Required",
+              "target": "Validation Required"
+            },
+            {
+              "source": "Resolved",
+              "target": "Resolved"
+            },
+            {
+              "source": "Code Merge Required",
+              "target": "Code Merge Required"
+            }
+
+
+          ]
+        }
+      },
+      {
+        "source": "status",
+        "target": "System.State",
+        "for": "User Story",
+        "mapping": {
+          "values": [
+            {
+              "source": "To Do",
+              "target": "New"
+            },
+            {
+              "source": "Reopened",
+              "target": "Reopened"
+            },
+            {
+              "source": "Done",
+              "target": "Done"
+            },
+            {
+              "source": "In Progress",
+              "target": "Committed"
+            },
+            {
+
+              "source": "Resolved",
+              "target": "Resolved"
+            },
+            {
+              "source": "Open",
+              "target": "Active"
+            },
+            {
+              "source": "Validation Required",
+              "target": "Validation Required"
+            },
+            {
+              "source": "Code Merge Required",
+              "target": "Code Merge Required"
+            },
+            {
+              "source": "Closed",
+              "target": "Closed"
+            }
+
+          ]
+        }
+      },
+      {
+        "source": "status",
+        "target": "System.State",
+        "for": "Feature",
+        "mapping": {
+          "values": [
+            {
+              "source": "To Do",
+              "target": "New"
+            },
+            {
+              "source": "Done",
+              "target": "Done"
+            },
+            {
+              "source": "In Progress",
+              "target": "Active"
+            },
+            {
+              "source": "Reopened",
+              "target": "Reopened"
+            },
+            {
+              "source": "Open",
+              "target": "Active"
+            },
+            {
+              "source": "Validation Required",
+              "target": "Validation Required"
+            },
+            {
+              "source": "Code Merge Required",
+              "target": "Code Merge Required"
+            },
+            {
+              "source": "Closed",
+              "target": "Closed"
+            },
+            {
+              "source": "Resolved",
+              "target": "Resolved"
+            }
+          ]
+        }
+
+      },
+      {
+        "source": "status",
+        "target": "System.State",
+        "for": "Epic,Feature",
+        "mapping": {
+          "values": [
+            {
+              "source": "To Do",
+              "target": "New"
+            },
+            {
+              "source": "Done",
+              "target": "Done"
+            },
+            {
+              "source": "In Progress",
+              "target": "Active"
+            },
+            {
+              "source": "Open",
+              "target": "Active"
+            },
+            {
+              "source": "Validation Required",
+              "target": "Validation Required"
+            },
+            {
+              "source": "Code Merge Required",
+              "target": "Code Merge Required"
+            },
+            {
+              "source": "Closed",
+              "target": "Closed"
+            },
+            {
+              "source": "Resolved",
+              "target": "Resolved"
+            }
+          ]
+        }
+      },
+      {
+        "source": "Story Points",
+        "source-type": "name",
+        "target": "Microsoft.VSTS.Scheduling.Effort",
+        "not-for": "Task"
+      },
+      {
+        "source": "timeestimate",
+        "target": "Microsoft.VSTS.Scheduling.RemainingWork",
+        "mapper": "MapRemainingWork",
+        "for": "Bug,Task"
+      },
+      {
+        "source": "activity",
+        "target": "Microsoft.VSTS.Common.Activity"
+      },
+      {
+        "source": "description",
+        "target": "Microsoft.VSTS.TCM.ReproSteps",
+        "for": "Bug"
+      }
+    ]
+
+  }
+}
